@@ -1,0 +1,575 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    padding: 60px 20px 40px;
+    text-align: center;
+}
+
+.logo img {
+    width: 120px;
+    /* Aumentei o tamanho da logo */
+    height: auto;
+    margin-bottom: 30px;
+    /* mais espaço abaixo da logo */
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    /* espaço abaixo do título */
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #aaa;
+    margin-bottom: 40px;
+    /* espaço maior para não grudar com a próxima seção */
+}
+
+
+section#cardapio p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.titulo {
+    font-size: 2.8rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.btn-ver-cardapio {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.btn-ver-cardapio:hover {
+    background-color: #e6b800;
+}
+
+section#cardapio {
+    padding: 60px 20px 80px;
+    /* mais espaço embaixo pra não colar no footer */
+}
+
+section#cardapio h2 {
+    font-size: 2.4rem;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+footer {
+    padding: 30px;
+    background-color: #111;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.whatsapp-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-link img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-link img:hover {
+  transform: scale(1.1);
+}
+
+/* Menu fixo no topo */
+.menu-cardapio {
+  position: sticky;
+  top: 0;
+  background-color: #111;
+  padding: 15px 0;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.menu-cardapio nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu-cardapio nav ul li a,
+.menu-cardapio nav ul li button {
+  color: #ffcc00;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-cardapio nav ul li a:hover,
+.menu-cardapio nav ul li a:focus,
+.menu-cardapio nav ul li button:hover,
+.menu-cardapio nav ul li button:focus {
+  color: #fff;
+}
+
+/* Seções e listas */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  text-align: center;
+  color: #ffcc00;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.lista-lanches {
+  list-style: none;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lanche-item {
+  background-color: #111;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  transition: background-color 0.3s ease;
+}
+
+.lanche-item:hover {
+  background-color: #222;
+}
+
+.lanche-item h3 {
+  margin: 0 0 8px 0;
+  flex-basis: 100%;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffcc00;
+}
+
+.lanche-item p {
+  margin: 0 0 12px 0;
+  color: #ccc;
+  flex-basis: 100%;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.preco {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #ffcc00;
+  margin-right: 20px;
+  min-width: 90px;
+  text-align: right;
+}
+
+.btn-adicionar {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 120px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.btn-adicionar:hover {
+  background-color: #e6b800;
+}
+
+/* Modal Carrinho */
+
+.modal-carrinho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+}
+
+.modal-carrinho.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  color: #fff;
+  box-shadow: 0 0 10px #ffcc00;
+  text-align: center;
+}
+
+#lista-carrinho {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#lista-carrinho li {
+  border-bottom: 1px solid #444;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+#total-carrinho {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+#btn-enviar-whatsapp, #btn-fechar-carrinho {
+  background-color: #ffcc00;
+  border: none;
+  color: #000;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 10px 5px 0 5px;
+  width: 45%;
+  transition: background-color 0.3s ease;
+}
+
+#btn-enviar-whatsapp:hover, #btn-fechar-carrinho:hover {
+  background-color: #e6b800;
+}
+#btn-limpar-carrinho {
+  background-color: #ff4444;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 10px 5px 0 5px;
+  width: 45%;
+  transition: background-color 0.3s ease;
+}
+
+#btn-limpar-carrinho:hover {
+  background-color: #cc0000;
+}
+
+#promocoes {
+  padding: 60px 20px;
+  background-color: #111;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(255, 204, 0, 0.4);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#promocoes h2 {
+  color: #ffcc00;
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.data-promo {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.lista-promocoes {
+  list-style: none;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.lista-promocoes li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.preco-promo {
+  color: #ffcc00;
+  font-weight: 700;
+}
+
+/* Estilo comum para as 3 seções */
+section#lanches,
+section#pasteis,
+section#sorvetes {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(255, 204, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Títulos */
+section#lanches h2,
+section#pasteis h2,
+section#sorvetes h2 {
+  font-size: 2.4rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Parágrafos */
+section#lanches p,
+section#pasteis p,
+section#sorvetes p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Botões */
+section#lanches .btn-ver-cardapio,
+section#pasteis .btn-ver-cardapio,
+section#sorvetes .btn-ver-cardapio {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+section#lanches .btn-ver-cardapio:hover,
+section#pasteis .btn-ver-cardapio:hover,
+section#sorvetes .btn-ver-cardapio:hover {
+  background-color: #e6b800;
+}
+
+.opcoes-pedido {
+  margin: 20px 0;
+  text-align: left;
+  font-size: 1rem;
+  color: #eee;
+}
+
+.opcoes-pedido label {
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+.opcoes-pedido select,
+.opcoes-pedido input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Modal de seleção de sabores */
+#modal-sabores .modal-content {
+    max-width: 400px;
+    text-align: left;
+}
+
+#lista-sabores {
+    margin: 15px 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#lista-sabores label {
+    display: block;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+#contador-sabores {
+    font-weight: bold;
+    color: #ffcc00;
+    margin-top: 10px;
+}
+
+#btn-adicionar-carrinho-pastel, #btn-fechar-sabores {
+    background-color: #ffcc00;
+    border: none;
+    color: #000;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px 5px 0 5px;
+}
+
+#btn-fechar-sabores {
+    background-color: #ff4444;
+    color: #fff;
+}
+
+#btn-adicionar-carrinho-pastel:hover {
+    background-color: #e6b800;
+}
+
+#btn-fechar-sabores:hover {
+    background-color: #cc0000;
+}
+
+/* Ajuste da seção de montagem de pastel */
+#pasteis .lanche-item label,
+#pasteis .lanche-item select,
+#pasteis .lanche-item button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#pasteis .lanche-item button {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#pasteis .lanche-item button:hover {
+  background-color: #e6b800;
+}
+
+/* Select de tamanho no mesmo estilo do botão */
+#pasteis #tamanho-pastel {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  appearance: none; /* remove a setinha padrão */
+  text-align: center;
+}
+
+#pasteis #tamanho-pastel:hover {
+  background-color: #e6b800;
+}
+
+/* Organização do pedido de pizzas */
+.lanche-item h4 {
+  font-size: 1.6rem;
+  color: #ffcc00;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.lanche-item .pizza-opcao {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.lanche-item label {
+  display: block;
+  font-weight: 600;
+  color: #ffcc00;
+  margin-bottom: 6px;
+}
+
+.lanche-item select {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
+  appearance: none; /* remove setinha padrão */
+  box-shadow: 0 0 4px rgba(255, 204, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.lanche-item select:hover {
+  background-color: #333;
+}

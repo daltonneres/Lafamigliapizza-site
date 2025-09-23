@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cardápio | La Famiglia Pizza | Pizzas</title>
+    <link rel="icon" type="image/png" href="favicon.png" title="Big Burger">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header class="menu-cardapio">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#pizzas">Pizzas</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+                <li><button id="btn-ver-carrinho">Ver Carrinho (<span id="contador-itens">0</span>)</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Pizzas -->
+        <section id="pizzas">
+            <h2>Nossas Pizzas</h2>
+
+            <!-- Pizzas Salgadas -->
+            <h3>Pizzas Salgadas</h3>
+            <ul class="lista-lanches">
+                <li class="lanche-item">
+                    <h4>Calabresa</h4>
+                    <p>Molho de tomate, queijo, calabresa fatiada, cebola</p>
+
+                    <div class="pizza-opcao">
+                        <label>Tamanho:</label>
+                        <select class="tamanho-pizza">
+                            <option value="BROTO">BROTO - R$ 20,00 (4 fatias)</option>
+                            <option value="PEQUENA">PEQUENA - R$ 25,00 (6 fatias)</option>
+                            <option value="MÉDIA">MÉDIA - R$ 35,00 (8 fatias)</option>
+                            <option value="GRANDE">GRANDE - R$ 45,00 (10 fatias)</option>
+                            <option value="FAMILIA">FAMÍLIA - R$ 55,00 (12 fatias)</option>
+                        </select>
+                    </div>
+
+                    <div class="pizza-opcao">
+                        <label>Meio a Meio (opcional):</label>
+                        <select class="meio-pizza">
+                            <option value="Nenhuma">Nenhuma</option>
+                            <option value="Frango com Catupiry">Frango com Catupiry</option>
+                            <option value="Portuguesa">Portuguesa</option>
+                            <option value="Chocolate com Morango">Chocolate com Morango</option>
+                            <option value="Banana com Canela">Banana com Canela</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-adicionar" data-produto="Calabresa" data-preco="20.00">Adicionar</button>
+                </li>
+
+                <li class="lanche-item">
+                    <h4>Frango com Catupiry</h4>
+                    <p>Molho de tomate, queijo, frango desfiado, catupiry</p>
+
+                    <div class="pizza-opcao">
+                        <label>Tamanho:</label>
+                        <select class="tamanho-pizza">
+                            <option value="BROTO">BROTO - R$ 22,00 (4 fatias)</option>
+                            <option value="PEQUENA">PEQUENA - R$ 27,00 (6 fatias)</option>
+                            <option value="MÉDIA">MÉDIA - R$ 37,00 (8 fatias)</option>
+                            <option value="GRANDE">GRANDE - R$ 47,00 (10 fatias)</option>
+                            <option value="FAMILIA">FAMÍLIA - R$ 57,00 (12 fatias)</option>
+                        </select>
+                    </div>
+
+                    <div class="pizza-opcao">
+                        <label>Meio a Meio (opcional):</label>
+                        <select class="meio-pizza">
+                            <option value="Nenhuma">Nenhuma</option>
+                            <option value="Calabresa">Calabresa</option>
+                            <option value="Portuguesa">Portuguesa</option>
+                            <option value="Chocolate com Morango">Chocolate com Morango</option>
+                            <option value="Banana com Canela">Banana com Canela</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-adicionar" data-produto="Frango com Catupiry"
+                        data-preco="22.00">Adicionar</button>
+                </li>
+            </ul>
+
+            <!-- Pizzas Doces -->
+            <h3>Pizzas Doces</h3>
+            <ul class="lista-lanches">
+                <li class="lanche-item">
+                    <h4>Chocolate com Morango</h4>
+                    <p>Chocolate ao leite, morangos frescos, cobertura de leite condensado</p>
+
+                    <div class="pizza-opcao">
+                        <label>Tamanho:</label>
+                        <select class="tamanho-pizza">
+                            <option value="BROTO">BROTO - R$ 18,00 (4 fatias)</option>
+                            <option value="PEQUENA">PEQUENA - R$ 23,00 (6 fatias)</option>
+                            <option value="MÉDIA">MÉDIA - R$ 33,00 (8 fatias)</option>
+                            <option value="GRANDE">GRANDE - R$ 43,00 (10 fatias)</option>
+                            <option value="FAMILIA">FAMÍLIA - R$ 53,00 (12 fatias)</option>
+                        </select>
+                    </div>
+
+                    <div class="pizza-opcao">
+                        <label>Meio a Meio (opcional):</label>
+                        <select class="meio-pizza">
+                            <option value="Nenhuma">Nenhuma</option>
+                            <option value="Banana com Canela">Banana com Canela</option>
+                            <option value="Calabresa">Calabresa</option>
+                            <option value="Frango com Catupiry">Frango com Catupiry</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-adicionar" data-produto="Chocolate com Morango"
+                        data-preco="18.00">Adicionar</button>
+                </li>
+            </ul>
+
+            <!-- Pizzas Mistas -->
+            <h3>Pizzas Mistas</h3>
+            <ul class="lista-lanches">
+                <li class="lanche-item">
+                    <h4>Portuguesa</h4>
+                    <p>Molho de tomate, queijo, presunto, ovo, cebola, azeitona</p>
+
+                    <div class="pizza-opcao">
+                        <label>Tamanho:</label>
+                        <select class="tamanho-pizza">
+                            <option value="BROTO">BROTO - R$ 21,00 (4 fatias)</option>
+                            <option value="PEQUENA">PEQUENA - R$ 26,00 (6 fatias)</option>
+                            <option value="MÉDIA">MÉDIA - R$ 36,00 (8 fatias)</option>
+                            <option value="GRANDE">GRANDE - R$ 46,00 (10 fatias)</option>
+                            <option value="FAMILIA">FAMÍLIA - R$ 56,00 (12 fatias)</option>
+                        </select>
+                    </div>
+
+                    <div class="pizza-opcao">
+                        <label>Meio a Meio (opcional):</label>
+                        <select class="meio-pizza">
+                            <option value="Nenhuma">Nenhuma</option>
+                            <option value="Calabresa">Calabresa</option>
+                            <option value="Frango com Catupiry">Frango com Catupiry</option>
+                            <option value="Chocolate com Morango">Chocolate com Morango</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-adicionar" data-produto="Portuguesa" data-preco="21.00">Adicionar</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Promoções de Pizzas -->
+        <section id="promocoes">
+            <h2>Promoções do Dia</h2>
+            <p class="data-promo">
+                Promoções válidas apenas durante nosso horário de funcionamento — <span id="data-atual"></span> — das
+                18:00 às 23:00
+            </p>
+            <ul class="lista-lanches">
+                <li class="lanche-item">
+                    <h3>Pizza Calabresa Média com 10% OFF</h3>
+                    <p>Pizza Calabresa média + escolha de meio a meio</p>
+                    <span class="preco">R$ 31,50</span>
+                    <button class="btn-adicionar" data-produto="Pizza Calabresa Média com 10% OFF"
+                        data-preco="31.50">Adicionar</button>
+                </li>
+                <li class="lanche-item">
+                    <h3>Pizza Doce Chocolate com Morango Pequena</h3>
+                    <p>Leve a sobremesa com desconto especial!</p>
+                    <span class="preco">R$ 20,00</span>
+                    <button class="btn-adicionar" data-produto="Pizza Doce Chocolate com Morango Pequena"
+                        data-preco="20.00">Adicionar</button>
+                </li>
+            </ul>
+        </section>
+
+        <script>
+            // Pega a data atual e coloca na seção promoções
+            const dataAtualEl = document.getElementById('data-atual');
+            const hoje = new Date();
+            const opcoes = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            dataAtualEl.textContent = hoje.toLocaleDateString('pt-BR', opcoes);
+        </script>
+    </main>
+
+    <div id="modal-carrinho" class="modal-carrinho hidden">
+        <div class="modal-content">
+            <h2>Seu Carrinho</h2>
+            <ul id="lista-carrinho"></ul>
+            <p id="total-carrinho">Total: R$ 0,00</p>
+
+            <div class="opcoes-pedido">
+                <label for="tipo-entrega">Tipo de Pedido:</label><br />
+                <select id="tipo-entrega" name="tipo-entrega">
+                    <option value="Entrega">Entrega (+R$ 8,00)</option>
+                    <option value="Retirada">Retirada</option>
+                </select>
+
+                <br /><br />
+
+                <!-- Endereço aparece só se for entrega -->
+                <div id="campo-endereco" style="display: none;">
+                    <label for="endereco">Endereço de Entrega:</label><br />
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro, cidade" />
+                </div>
+
+                <br />
+
+                <label for="forma-pagamento">Forma de Pagamento:</label><br />
+                <select id="forma-pagamento" name="forma-pagamento">
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                </select>
+
+                <br /><br />
+
+                <label for="troco">Precisa de troco? Se sim, informe o valor:</label><br />
+                <input type="text" id="troco" name="troco" placeholder="Ex: 50,00" />
+            </div>
+
+            <button id="btn-enviar-whatsapp">Enviar Pedido via WhatsApp</button>
+            <button id="btn-limpar-carrinho">Limpar Carrinho</button>
+            <button id="btn-fechar-carrinho">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        const tipoEntrega = document.getElementById('tipo-entrega');
+        const campoEndereco = document.getElementById('campo-endereco');
+        const totalCarrinhoEl = document.getElementById('total-carrinho');
+        let totalCarrinho = 0;
+
+        tipoEntrega.addEventListener('change', () => {
+            if (tipoEntrega.value === 'Entrega') {
+                campoEndereco.style.display = 'block';
+                atualizarTotal(8); // Adiciona taxa de entrega
+            } else {
+                campoEndereco.style.display = 'none';
+                atualizarTotal(-8); // Remove taxa se mudar para retirada
+            }
+        });
+
+        function atualizarTotal(valor) {
+            totalCarrinho += valor;
+            if (totalCarrinho < 0) totalCarrinho = 0;
+            totalCarrinhoEl.textContent = `Total: R$ ${totalCarrinho.toFixed(2)}`;
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+    <footer>
+&copy; 2025 La Famiglia Pizza – Tradição e sabor em cada fatia – Todos os direitos reservados.
+    </footer>
+
+</body>
+
+</html>
