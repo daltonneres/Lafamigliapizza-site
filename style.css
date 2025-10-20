@@ -573,3 +573,98 @@ section#sorvetes .btn-ver-cardapio:hover {
 .lanche-item select:hover {
   background-color: #333;
 }
+
+/* ==============================
+   RESPONSIVO
+   ============================== */
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header p {
+        font-size: 1.2rem;
+    }
+    section h2 {
+        font-size: 2.4rem;
+    }
+    .lista-lanches {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+    .lista-lanches {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .lanche-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .preco,
+    .btn-adicionar {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .btn-ver-cardapio {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    #btn-enviar-whatsapp,
+    #btn-fechar-carrinho,
+    #btn-limpar-carrinho,
+    #btn-adicionar-carrinho-pastel,
+    #pasteis #tamanho-pastel {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .opcoes-pedido select,
+    .opcoes-pedido input[type="text"],
+    .lanche-item select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+    header p {
+        font-size: 0.9rem;
+    }
+    section h2 {
+        font-size: 1.6rem;
+    }
+    .lanche-item h3,
+    .lanche-item h4 {
+        font-size: 1.3rem;
+    }
+    .lanche-item p {
+        font-size: 1rem;
+    }
+    .btn-ver-cardapio {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+    .lista-promocoes {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    .data-promo {
+        font-size: 0.9rem;
+    }
+    .modal-content {
+        padding: 20px;
+    }
+}
